@@ -5,7 +5,14 @@
     <field name="name">hospital.appointment.list</field>
     <field name="model">hospital.appointment</field>
     <field name="arch" type="xml">
+<<<<<<< HEAD
       <list>
+=======
+      <!-- <list> -->
+      <list decoration-success="status == 'done'"
+        decoration-danger="status == 'cancel'"
+        decoration-warning="status == 'draft'">
+>>>>>>> partner/main
         <field name="patient_id" />
         <field name="doctor_id" />
         <field name="appointment_date" />
@@ -21,26 +28,53 @@
     <field name="arch" type="xml">
       <form>
         <header>
+<<<<<<< HEAD
 
           <button name="action_confirm"
+=======
+          <button
+            name="%(action_appointment_report)d"
+            string="Print Report"
+            type="action"
+            class="btn-secondary" />
+          <!-- <button name="action_confirm" -->
+          <button name="action_confirm"
+            groups="hospital_management.group_hospital_doctor,hospital_management.group_hospital_admin"
+>>>>>>> partner/main
             string="Confirm"
             type="object"
             class="btn-primary"
             invisible="status != 'draft'" />
 
+<<<<<<< HEAD
           <button name="action_done"
+=======
+          <!-- <button name="action_done" -->
+          <button name="action_done"
+            groups="hospital_management.group_hospital_doctor,hospital_management.group_hospital_admin"
+>>>>>>> partner/main
             string="Done"
             type="object"
             class="btn-success"
             invisible="status != 'confirmed'" />
 
+<<<<<<< HEAD
           <button name="action_cancel"
+=======
+          <!-- <button name="action_cancel" -->
+          <button name="action_cancel"
+            groups="hospital_management.group_hospital_doctor,hospital_management.group_hospital_admin"
+>>>>>>> partner/main
             string="Cancel"
             type="object"
             class="btn-danger"
             invisible="status == 'done'" />
 
           <button name="action_draft"
+<<<<<<< HEAD
+=======
+            groups="hospital_management.group_hospital_doctor,hospital_management.group_hospital_admin"
+>>>>>>> partner/main
             string="Reset to Draft"
             type="object"
             invisible="status == 'draft'" />
@@ -60,6 +94,12 @@
             <group>
               <field name="appointment_date" />
               <field name="status" />
+<<<<<<< HEAD
+=======
+              <field name="amount" />
+              <field name="invoice_id" />
+              <field name="payment_state" />
+>>>>>>> partner/main
             </group>
           </group>
 

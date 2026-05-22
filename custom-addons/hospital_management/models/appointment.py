@@ -35,12 +35,53 @@ class HospitalAppointment(models.Model):
 
     notes = fields.Text(string="Notes")
 
+<<<<<<< HEAD
+=======
+    amount = fields.Float(
+        string="Amount",
+        default=100
+    )
+
+    invoice_id = fields.Many2one(
+        "account.move",
+        string="Invoice"
+    )
+
+    payment_state = fields.Selection(
+        related="invoice_id.payment_state",
+        string="Payment Status",
+        readonly=True
+    )
+
+>>>>>>> partner/main
     def action_confirm(self):
         self.status = "confirmed"
 
     def action_done(self):
+<<<<<<< HEAD
         self.status = "done"
 
+=======
+
+        self.status = "done"
+
+        if not self.invoice_id:
+
+            invoice = self.env["account.move"].create({
+                "move_type": "out_invoice",
+
+                "partner_id": self.patient_id.partner_id.id,
+
+                "invoice_line_ids": [(0, 0, {
+                    "name": "Medical Appointment",
+                    "quantity": 1,
+                    "price_unit": self.amount,
+                })]
+            })
+
+            self.invoice_id = invoice.id
+
+>>>>>>> partner/main
     def action_cancel(self):
         self.status = "cancel"
 

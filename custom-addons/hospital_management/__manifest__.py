@@ -16,17 +16,24 @@
     ],
     "data": [
         "security/security.xml",
-                "security/project_security.xml",
-
+        "security/project_security.xml",
         "security/ir.model.access.csv",
+        "reports/appointment_report.xml",
+        "reports/appointment_templates.xml",
+        "reports/dashboard_report.xml",
+        "reports/dashboard_template.xml",
         "views/patient_views.xml",
         "views/doctor_views.xml",
         "views/appointment_views.xml",
         "views/medical_supply_views.xml",
         "views/appointment_supply_view.xml",
-                "views/project_menus.xml",
-
+        "views/project_menus.xml",
+        "views/dashboard_views.xml",
+        "data/demo_data.xml",
     ],
     "installable": True,
     "application": True,
+    "demo": [
+        "demo/demo.xml",
+    ],
 }

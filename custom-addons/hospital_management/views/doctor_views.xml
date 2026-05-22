@@ -10,8 +10,13 @@
         <field name="specialization" />
         <field name="phone" />
         <field name="salary" />
+<<<<<<< HEAD
         <field name="employee_id"/>
         <field name="user_id"/>
+=======
+        <field name="employee_id" />
+        <field name="user_id" />
+>>>>>>> partner/main
       </list>
     </field>
   </record>
@@ -22,6 +27,23 @@
     <field name="model">hospital.doctor</field>
     <field name="arch" type="xml">
       <form>
+<<<<<<< HEAD
+=======
+        <div class="oe_button_box" name="button_box">
+
+          <button type="object"
+            name="action_view_appointments"
+            class="oe_stat_button"
+            icon="fa-calendar">
+
+            <field name="appointment_count"
+              string="Appointments"
+              widget="statinfo" />
+
+          </button>
+
+        </div>
+>>>>>>> partner/main
         <sheet>
           <group>
             <group>
@@ -29,8 +51,13 @@
               <field name="age" />
               <field name="gender" />
               <field name="specialization" />
+<<<<<<< HEAD
               <field name="employee_id"/>
               <field name="user_id"/>
+=======
+              <field name="employee_id" />
+              <field name="user_id" />
+>>>>>>> partner/main
             </group>
 
             <group>
@@ -55,6 +82,49 @@
     </field>
   </record>
 
+<<<<<<< HEAD
+=======
+
+  <!-- Search View -->
+  <record id="view_hospital_doctor_search" model="ir.ui.view">
+    <field name="name">hospital.doctor.search</field>
+
+    <field name="model">hospital.doctor</field>
+
+    <field name="arch" type="xml">
+
+      <search>
+
+        <field name="name" />
+
+        <field name="specialization" />
+
+        <filter
+          name="filter_male"
+          string="Male"
+          domain="[('gender', '=', 'male')]"
+        />
+
+        <filter
+          name="filter_female"
+          string="Female"
+          domain="[('gender', '=', 'female')]"
+        />
+
+        <separator />
+
+        <filter
+          name="group_by_specialization"
+          string="Group By Specialization"
+          context="{'group_by': 'specialization'}"
+        />
+
+      </search>
+
+    </field>
+  </record>
+
+>>>>>>> partner/main
   <!-- Action -->
   <record id="action_hospital_doctor" model="ir.actions.act_window">
     <field name="name">Doctors</field>
