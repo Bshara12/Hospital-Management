@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+  <menuitem
+    id="hospital_my_tasks_menu"
+    name="My Tasks"
+    parent="hospital_management_root_menu"
+    action="project.action_view_my_task"
+    groups="hospital_management.group_hospital_project_assignee"
+    sequence="50"
+  />
+
+</odoo>

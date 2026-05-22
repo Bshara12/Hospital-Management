@@ -1,0 +1,31 @@
+<odoo>
+
+  <!--
+    وراثة نموذج المواعيد من المطور 1
+    نضيف تبويب المستلزمات الطبية دون تعديل appointment_views.xml
+  -->
+  <record id="view_hospital_appointment_form_inherit_supply" model="ir.ui.view">
+    <field name="name">hospital.appointment.form.inherit.supply</field>
+    <field name="model">hospital.appointment</field>
+    <field name="inherit_id" ref="view_hospital_appointment_form" />
+    <field name="arch" type="xml">
+
+      <!-- إضافة تبويب Medical Supplies داخل الـ notebook الموجود -->
+      <xpath expr="//notebook" position="inside">
+        <page string="Medical Supplies">
+          <field name="supply_ids">
+            <list editable="bottom">
+              <field name="name" />
+              <field name="supply_type" />
+              <field name="quantity" />
+              <field name="unit" />
+              <field name="notes" />
+            </list>
+          </field>
+        </page>
+      </xpath>
+
+    </field>
+  </record>
+
+</odoo>

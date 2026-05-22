@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+  <record id="project_task_rule_hospital_assignee" model="ir.rule">
+    <field name="name">Hospital: assigned tasks only</field>
+    <field name="model_id" ref="project.model_project_task"/>
+    <field name="domain_force">[('user_ids', 'in', user.id)]</field>
+    <field name="groups" eval="[(4, ref('group_hospital_doctor')), (4, ref('group_hospital_receptionist'))]"/>
+  </record>
+
+  <record id="project_project_rule_hospital_assignee" model="ir.rule">
+    <field name="name">Hospital: projects linked to my assigned tasks</field>
+    <field name="model_id" ref="project.model_project_project"/>
+    <field name="domain_force">[('task_ids.user_ids', 'in', user.id)]</field>
+    <field name="groups" eval="[(4, ref('group_hospital_doctor')), (4, ref('group_hospital_receptionist'))]"/>
+  </record>
+
+</odoo>

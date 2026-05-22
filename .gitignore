@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Odoo / Source
+odoo-source/
+.venv/
+env/
+venv/
+
+# Logs
+*.log
+*.log.*
+
+# Databases & Backups
+*.sqlite3
+*.tar.gz
+*.sql
+*.dump
+
+# VS Code & IDEs
+.vscode/
+.idea/
+
+# System Files
+.DS_Store
+Thumbs.db
