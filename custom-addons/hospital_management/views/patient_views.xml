@@ -1,9 +1,7 @@
 <odoo>
 
-<<<<<<< HEAD
-=======
+
   <!-- List View -->
->>>>>>> partner/main
   <record id="view_hospital_patient_list" model="ir.ui.view">
     <field name="name">hospital.patient.list</field>
     <field name="model">hospital.patient</field>
@@ -18,10 +16,7 @@
     </field>
   </record>
 
-<<<<<<< HEAD
-=======
   <!-- Form View -->
->>>>>>> partner/main
   <record id="view_hospital_patient_form" model="ir.ui.view">
     <field name="name">hospital.patient.form</field>
     <field name="model">hospital.patient</field>
@@ -40,10 +35,7 @@
               <field name="phone" />
               <field name="email" />
               <field name="address" />
-<<<<<<< HEAD
               <field name="partner_id" invisible="1" />
-=======
->>>>>>> partner/main
             </group>
           </group>
 
@@ -60,42 +52,30 @@
                 </list>
               </field>
             </page>
-<<<<<<< HEAD
             <page string="System Link">
               <group>
                 <field name="partner_id" readonly="1" string="Linked Partner ID"/>
               </group>
             </page>
-=======
->>>>>>> partner/main
           </notebook>
         </sheet>
       </form>
     </field>
   </record>
 
-<<<<<<< HEAD
-=======
   <!-- Action -->
->>>>>>> partner/main
   <record id="action_hospital_patient" model="ir.actions.act_window">
     <field name="name">Patients</field>
     <field name="res_model">hospital.patient</field>
     <field name="view_mode">list,form</field>
   </record>
 
-<<<<<<< HEAD
-=======
   <!-- Main Menu -->
->>>>>>> partner/main
   <menuitem id="hospital_management_root_menu"
     name="Hospital Management"
     sequence="10" />
 
-<<<<<<< HEAD
-=======
   <!-- Patients Menu -->
->>>>>>> partner/main
   <menuitem id="hospital_patient_menu"
     name="Patients"
     parent="hospital_management_root_menu"

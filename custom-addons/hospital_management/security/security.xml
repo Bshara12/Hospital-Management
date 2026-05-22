@@ -97,9 +97,14 @@
       (4, ref('account.group_account_invoice'))
     ]" />
   </record>
-          <menuitem id="maintenance.menu_maintenance_title" 
+  
+  <menuitem id="maintenance.menu_maintenance_title" 
           name="Maintenance" 
-          groups="hospital_management.group_hospital_maintenance,hospital_management.group_hospital_system_admin"/>
+          groups="hospital_management.group_hospital_maintenance,hospital_management.group_hospital_system_admin,hospital_management.group_hospital_ops_manager"/>
+
+  <menuitem id="stock.menu_stock_root" 
+          name="Inventory" 
+          groups="hospital_management.group_hospital_inventory_officer,hospital_management.group_hospital_system_admin"/>
 
           
 </odoo>

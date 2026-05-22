@@ -10,13 +10,10 @@
         <field name="specialization" />
         <field name="phone" />
         <field name="salary" />
-<<<<<<< HEAD
         <field name="employee_id"/>
         <field name="user_id"/>
-=======
         <field name="employee_id" />
         <field name="user_id" />
->>>>>>> partner/main
       </list>
     </field>
   </record>
@@ -27,8 +24,6 @@
     <field name="model">hospital.doctor</field>
     <field name="arch" type="xml">
       <form>
-<<<<<<< HEAD
-=======
         <div class="oe_button_box" name="button_box">
 
           <button type="object"
@@ -43,7 +38,6 @@
           </button>
 
         </div>
->>>>>>> partner/main
         <sheet>
           <group>
             <group>
@@ -51,13 +45,9 @@
               <field name="age" />
               <field name="gender" />
               <field name="specialization" />
-<<<<<<< HEAD
-              <field name="employee_id"/>
-              <field name="user_id"/>
-=======
+
               <field name="employee_id" />
               <field name="user_id" />
->>>>>>> partner/main
             </group>
 
             <group>
@@ -81,9 +71,6 @@
       </form>
     </field>
   </record>
-
-<<<<<<< HEAD
-=======
 
   <!-- Search View -->
   <record id="view_hospital_doctor_search" model="ir.ui.view">
@@ -124,7 +111,6 @@
     </field>
   </record>
 
->>>>>>> partner/main
   <!-- Action -->
   <record id="action_hospital_doctor" model="ir.actions.act_window">
     <field name="name">Doctors</field>
