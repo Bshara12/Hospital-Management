@@ -35,8 +35,6 @@ class HospitalAppointment(models.Model):
 
     notes = fields.Text(string="Notes")
 
-<<<<<<< HEAD
-=======
     amount = fields.Float(
         string="Amount",
         default=100
@@ -53,16 +51,10 @@ class HospitalAppointment(models.Model):
         readonly=True
     )
 
->>>>>>> partner/main
     def action_confirm(self):
         self.status = "confirmed"
 
     def action_done(self):
-<<<<<<< HEAD
-        self.status = "done"
-
-=======
-
         self.status = "done"
 
         if not self.invoice_id:
@@ -81,7 +73,6 @@ class HospitalAppointment(models.Model):
 
             self.invoice_id = invoice.id
 
->>>>>>> partner/main
     def action_cancel(self):
         self.status = "cancel"
 

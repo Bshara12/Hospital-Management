@@ -20,20 +20,14 @@ class HospitalDoctor(models.Model):
     salary = fields.Float(string="Salary")
 
     employee_id = fields.Many2one("hr.employee", string="Related Employee")
-<<<<<<< HEAD
-    user_id = fields.Many2one("res.users", string="Related User")
-=======
 
     user_id = fields.Many2one("res.users", string="Related User")
 
->>>>>>> partner/main
     active = fields.Boolean(default=True)
 
     appointment_ids = fields.One2many(
         "hospital.appointment", "doctor_id", string="Appointments"
     )
-<<<<<<< HEAD
-=======
 
     appointment_count = fields.Integer(
         string="Appointments Count", compute="_compute_appointment_count"
@@ -51,4 +45,3 @@ class HospitalDoctor(models.Model):
             "res_model": "hospital.appointment",
             "domain": [("doctor_id", "=", self.id)],
         }
->>>>>>> partner/main
